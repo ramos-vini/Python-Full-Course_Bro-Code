@@ -1,11 +1,7 @@
-spongebob = patrick = 30
+name = "Johhny Cash"
 
-print(spongebob)
-print(patrick)
-
-print("---------------")
-name, age, human = "sandy", 35, False
-
-print(name)
-print(age)
-print(human)
+print(name.upper())
+print(name.count("h"))
+print(name.find("c"))
+print(name.isdigit())
+print(name*3)
