@@ -1,6 +1,11 @@
-height = 170.5
-age = 25
-name = "Billy Ocean"
+spongebob = patrick = 30
 
-print(name + " is " + str(age) + " years old and " + str(height) + "cm height.")
-print(type(height))
+print(spongebob)
+print(patrick)
+
+print("---------------")
+name, age, human = "sandy", 35, False
+
+print(name)
+print(age)
+print(human)
