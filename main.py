@@ -1,21 +1,10 @@
-# for i in range(11):
-#     print(i)
+print("Let's build a rectangle!")
 
-# for i in range(50, 100, 2):
-#     print(i+1)
+symbol = input("Enter a symbol: ")
+rows = int(input("Now enter the number os rows: "))
+columns = int(input("And finally the number of columns: "))
 
-# for i in range(50, 101, 2):
-#     print(i)
-#
-# name = "Billy Ocean"
-#
-# for i in name:
-#     print(i)
-
-import time
-
-for i in range(10, 0, -1):
-    print(i)
-    time.sleep(1)
-
-print("Happy New Year!!!")
+for i in range(rows):
+    for j in range(columns):
+        print(symbol, end="")
+    print()
