@@ -1,7 +1,7 @@
-name = "Johhny Cash"
+name = input("What is your name?")
+age = int(input("How old are you?"))
+height = float(input("How tall are you? (don't lie, buddy)"))
 
-print(name.upper())
-print(name.count("h"))
-print(name.find("c"))
-print(name.isdigit())
-print(name*3)
+print("Your name is " + name)
+print("You are " + str(age) + " years old")
+print("You are " + str(height) + "m tall (supposedly)")
