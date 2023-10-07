@@ -1,7 +1,21 @@
-name = ""
+# for i in range(11):
+#     print(i)
 
-while len(name) == 0:
-    name = input("What's your name?")
-    name = name.replace(" ", "")
+# for i in range(50, 100, 2):
+#     print(i+1)
 
-print("Hello " + name)
+# for i in range(50, 101, 2):
+#     print(i)
+#
+# name = "Billy Ocean"
+#
+# for i in name:
+#     print(i)
+
+import time
+
+for i in range(10, 0, -1):
+    print(i)
+    time.sleep(1)
+
+print("Happy New Year!!!")
