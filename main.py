@@ -1,10 +1,13 @@
-print("Let's build a rectangle!")
+while True:
+    name = input("What's your name?")
+    if name != "":
+        break
 
-symbol = input("Enter a symbol: ")
-rows = int(input("Now enter the number os rows: "))
-columns = int(input("And finally the number of columns: "))
+print("Hello " + name)
 
-for i in range(rows):
-    for j in range(columns):
-        print(symbol, end="")
-    print()
+phoneNumber = "123-456-7890"
+
+for i in phoneNumber:
+    if i == "-":
+        continue
+    print(i, end="")
