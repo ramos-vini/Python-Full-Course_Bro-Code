@@ -1,16 +1,13 @@
-capitals = {
-    "Brazil": "Brasilia",
-    "Spain": "Madrid",
-    "Portugal": "Lisbon",
-    "Germany": "Berlin",
-}
+name = "bro Code"
 
-capitals.update({"USA": "Washington DC"})
+if name[0].islower():
+    name = name.capitalize()
 
-print(capitals)
-print(capitals.items())
-print(capitals.keys())
-print(capitals.values())
+print(name)
 
-print(capitals["Brazil"])
+first_name = name[:3].upper()
+last_name = name[4:].upper()
 
+print(first_name)
+print(last_name)
+print(last_name[-1])
