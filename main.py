@@ -1,9 +1,14 @@
-student = ("Bro", 21, "undergraduate")
+clothes = {"shirt", "pants"}
+utensils = {"knife", "map", "lighter", "lighter"}
+dishes = {"knife", "plate", "cup"}
 
-print(student)
+clothes.add("hat")
 
-for value in student:
-    print(value)
+utensils.update(clothes)
 
-if "Bro" in student:
-    print(student.index("Bro"))
+print(utensils)
+
+print(utensils.intersection(dishes))
+
+print(utensils.difference())
+
