@@ -1,10 +1,12 @@
-foods = ["pizza", "sushi", "hamburger", "hotdog"]
+breakfast = ["egg", "bacon", "toast"]
+lunch = ["beef", "rice", "bean"]
+dinner = ["soup", "bread"]
 
-print(foods)
+meals = [breakfast, lunch, dinner]
 
-foods.append("kebab")
-foods.remove("pizza")
-foods.sort()
+print(meals)
 
-for food in foods:
-    print(food)
+print(meals[0][2])
+print(meals[1][1])
+print(meals[2][1])
+
