@@ -1,14 +1,16 @@
-clothes = {"shirt", "pants"}
-utensils = {"knife", "map", "lighter", "lighter"}
-dishes = {"knife", "plate", "cup"}
+capitals = {
+    "Brazil": "Brasilia",
+    "Spain": "Madrid",
+    "Portugal": "Lisbon",
+    "Germany": "Berlin",
+}
 
-clothes.add("hat")
+capitals.update({"USA": "Washington DC"})
 
-utensils.update(clothes)
+print(capitals)
+print(capitals.items())
+print(capitals.keys())
+print(capitals.values())
 
-print(utensils)
-
-print(utensils.intersection(dishes))
-
-print(utensils.difference())
+print(capitals["Brazil"])
 
