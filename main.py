@@ -1,12 +1,9 @@
-breakfast = ["egg", "bacon", "toast"]
-lunch = ["beef", "rice", "bean"]
-dinner = ["soup", "bread"]
+student = ("Bro", 21, "undergraduate")
 
-meals = [breakfast, lunch, dinner]
+print(student)
 
-print(meals)
+for value in student:
+    print(value)
 
-print(meals[0][2])
-print(meals[1][1])
-print(meals[2][1])
-
+if "Bro" in student:
+    print(student.index("Bro"))
