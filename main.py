@@ -1,13 +1,7 @@
-name = "bro Code"
+def hello(first, middle, last):
+    return f'Hello, {first} {middle} {last}!'
 
-if name[0].islower():
-    name = name.capitalize()
 
-print(name)
+print(hello(last="Code", middle="Dude", first="Bro"))
 
-first_name = name[:3].upper()
-last_name = name[4:].upper()
 
-print(first_name)
-print(last_name)
-print(last_name[-1])
