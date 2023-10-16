@@ -1,9 +1,12 @@
-def sum_numbers(*numbers):
-    sum = 0
-    for n in numbers:
-        sum += n
-    print(sum)
+def print_name(**names):
+    print("Hello, ", end=" ")
+    for key, value in names.items():
+        print(value, end=" ")
 
 
-sum_numbers(1, 2, 3.5, 4)
+print_name(first="billy", middle="the burger", last="ocean")
+
+
+
+
 
