@@ -1,7 +1,9 @@
-def hello(first, middle, last):
-    return f'Hello, {first} {middle} {last}!'
+def sum_numbers(*numbers):
+    sum = 0
+    for n in numbers:
+        sum += n
+    print(sum)
 
 
-print(hello(last="Code", middle="Dude", first="Bro"))
-
+sum_numbers(1, 2, 3.5, 4)
 
