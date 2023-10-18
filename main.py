@@ -1,18 +1,12 @@
-try:
-    numerator = float(input("Enter the numerator of the division: "))
-    denominator = float(input("Now enter the denominator: "))
-    result = numerator / denominator
-except ZeroDivisionError as e:
-    print(e)
-    print("You can not divide a number by Zero.")
-except ValueError as e:
-    print(e)
-    print("Please enter only numbers.")
-except Exception as e:
-    print(e)
-    print("Something went wrong.")
-else:
-    print(f"Result: {result}")
-finally:
-    print("This will always be executed.")
+import os
 
+file_path = "/Users/viniciusramos/Desktop/test.txt"
+
+if os.path.exists(file_path):
+    print("The path exists.")
+    if os.path.isfile(file_path):
+        print("And it is a file.")
+    elif os.path.isdir(file_path):
+        print("And it is a directory.")
+else:
+    print("The path does not exist.")
