@@ -1,18 +1,22 @@
 import os
+import shutil
 
-src = "text.txt"
-destination = "/Users/viniciusramos/Desktop/text.txt"
+path = "test.txt"
 
 try:
-    if os.path.exists(destination):
-        print("This path already exists in the destination.")
-    else:
-        os.replace(src, destination)
-        print(f"'{src}' was successfully moved.")
+    os.remove(path)        # for files
+    # os.rmdir(path)       # for empty folders
+    # shutil.rmtree(path)  # for folders with files (dangerous function)
 
 except FileNotFoundError as e:
     print(e)
+except PermissionError as e:
+    print(e)
+except OSError as e:
+    print(e)
 except Exception as e:
     print(e)
+else:
+    print(f"{path} was successfully deleted.")
 
 
