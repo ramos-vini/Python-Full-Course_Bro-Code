@@ -1,22 +1,10 @@
-import os
-import shutil
+import messages as msg
+# from messages import hello, bye
 
-path = "test.txt"
+msg.hello()
+msg.bye()
 
-try:
-    os.remove(path)        # for files
-    # os.rmdir(path)       # for empty folders
-    # shutil.rmtree(path)  # for folders with files (dangerous function)
+# hello()
+# bye()
 
-except FileNotFoundError as e:
-    print(e)
-except PermissionError as e:
-    print(e)
-except OSError as e:
-    print(e)
-except Exception as e:
-    print(e)
-else:
-    print(f"{path} was successfully deleted.")
-
-
+# help("modules")
