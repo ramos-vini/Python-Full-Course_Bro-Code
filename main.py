@@ -1,9 +1,10 @@
-from car import Car
+from animals import *
+cat = Cat()
+cat.meow()
+cat.eat()
 
-car_1 = Car("ferrari", "roma", "red", 2023)
+dog = Dog()
+dog.bark()
+dog.sleep()
 
-car_1.drive()
 
-car_2 = Car("porsche", "panamera", "dark blue", 2022)
-
-car_2.stop()
