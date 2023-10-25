@@ -1,9 +1,32 @@
-from animals import *
+class Car():
+    def turn_on(self):
+        print("This car turns on.")
+        return self
 
-fish = Fish()
+    def drive(self):
+        print("This car drives.")
+        return self
 
-fish.eat()
-fish.flee()
-fish.hunt()
+    def brake(self):
+        print("This car brakes.")
+        return self
 
+    def turn_off(self):
+        print("This car turns off.")
+        return self
+
+
+car = Car()
+
+# car.turn_on().drive().brake().turn_off()
+
+# car.turn_on(). \
+#     drive(). \
+#     brake(). \
+#     turn_off()
+
+(car.turn_on().
+ drive().
+ brake().
+ turn_off())
 
