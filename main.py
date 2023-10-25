@@ -1,10 +1,9 @@
 from animals import *
-cat = Cat()
-cat.meow()
-cat.eat()
 
-dog = Dog()
-dog.bark()
-dog.sleep()
+fish = Fish()
+
+fish.eat()
+fish.flee()
+fish.hunt()
 
 

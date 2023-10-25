@@ -1,24 +1,22 @@
 class Animal:
-    species = None
-
     alive = True
 
     def eat(self):
-        print(f"This {self.species} is eating.")
-
-    def sleep(self):
-        print(f"This {self.species} is sleeping.")
+        print(f"This animal is eating.")
 
 
-class Dog(Animal):
-    species = "dog"
-
-    def bark(self):
-        print("This dog is barking.")
+class Predator(Animal):
+    def hunt(self):
+        print("This predator hunts.")
 
 
-class Cat(Animal):
-    species = "cat"
+class Prey(Animal):
+    def flee(self):
+        print("This prey flees.")
 
-    def meow(self):
-        print("This cat is meowing.")
+
+class Fish (Prey, Predator):
+    def swim(self):
+        print("This fish swims.")
+
+
