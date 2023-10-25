@@ -1,32 +1,23 @@
-class Car():
-    def turn_on(self):
-        print("This car turns on.")
-        return self
+class Rectangle:
+    def __init__(self, height, width):
+        self.height = height
+        self.width = width
 
-    def drive(self):
-        print("This car drives.")
-        return self
-
-    def brake(self):
-        print("This car brakes.")
-        return self
-
-    def turn_off(self):
-        print("This car turns off.")
-        return self
+    def calc_area(self):
+        return self.height * self.width
 
 
-car = Car()
+class Parallelepiped(Rectangle):
+    def __init__(self, height, width, length):
+        super().__init__(height, width)
+        self.length = length
 
-# car.turn_on().drive().brake().turn_off()
+    def calc_volume(self):
+        return self.height * self.width * self.length
 
-# car.turn_on(). \
-#     drive(). \
-#     brake(). \
-#     turn_off()
 
-(car.turn_on().
- drive().
- brake().
- turn_off())
+rectangle = Rectangle(3, 3)
+print(rectangle.calc_area())
 
+parallelepiped = Parallelepiped(3, 3, 3)
+print(parallelepiped.calc_volume())
