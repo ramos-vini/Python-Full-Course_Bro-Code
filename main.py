@@ -1,23 +1,24 @@
-class Rectangle:
-    def __init__(self, height, width):
-        self.height = height
-        self.width = width
-
-    def calc_area(self):
-        return self.height * self.width
+from abc import ABC, abstractmethod
 
 
-class Parallelepiped(Rectangle):
-    def __init__(self, height, width, length):
-        super().__init__(height, width)
-        self.length = length
-
-    def calc_volume(self):
-        return self.height * self.width * self.length
+class Vehicle(ABC):
+    @abstractmethod
+    def go(self):
+        pass
 
 
-rectangle = Rectangle(3, 3)
-print(rectangle.calc_area())
+class Car(Vehicle):
+    def go(self):
+        print("This car goes.")
 
-parallelepiped = Parallelepiped(3, 3, 3)
-print(parallelepiped.calc_volume())
+
+class Motorcycle(Vehicle):
+    def go(self):
+        print("This motorcycle goes.")
+
+
+car = Car()
+car.go()
+
+motorcycle = Motorcycle()
+motorcycle.go()
