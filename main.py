@@ -1,13 +1,8 @@
-store = [
-    ("shirt", 10.0),
-    ("shoes", 18.00),
-    ("socks", 6.50)
-]
+import functools
 
-to_euros = lambda data: (data[0], data[1] * 0.95)
+numbers = [5, 4, 3, 2, 1]
 
-store_euros = map(to_euros, store)
+factorial = functools.reduce(lambda x, y: x * y, numbers)
 
-for i in store_euros:
-    print(i)
+print(factorial)
 
