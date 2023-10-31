@@ -1,6 +1,25 @@
-foods = []
+# def loud(text):
+#     return text.upper()
+#
+#
+# def quite(text):
+#     return text.lower()
+#
+#
+# def hello(function):
+#     return print(function("Hello!"))
+#
+#
+# hello(loud)
+#
+# hello(quite)
 
-while (food := input("What food do you like? ")) != "quit":
-    foods.append(food)
+def scream(text):
+    return f"{text.upper()}!!!"
 
-print(foods)
+
+def aggressive_hello(name):
+    return f"HELLO, {scream(name)}"
+
+
+print(aggressive_hello("user"))
