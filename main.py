@@ -1,19 +1,26 @@
-numbers = []
+cities_temp = {"Rio": 34, "Berlin": 13, "Madrid": 21, "Denmark": 7}
+print(cities_temp)
 
-for i in range(1, 11):
-    numbers.append(i)
+cities_temp_fahrenheit = {key: round(value/5*9+32) for (key, value) in cities_temp.items()}
+print(cities_temp_fahrenheit)
 
-print(numbers)
+warm_cities_temp = {key: value for (key, value) in cities_temp.items() if value >= 20}
+print(warm_cities_temp)
 
-numbers2 = [i for i in range(1, 11)]
-print(numbers2)
+cities_temp_desc = {key: "Acceptable" if value >= 10 else "No way" for (key,value) in cities_temp.items()}
+print(cities_temp_desc)
 
-numbers_even = list(filter(lambda i: i % 2 == 0, numbers))
-print(numbers_even)
 
-numbers_odd = [i for i in range(1, 11) if i % 2 != 0]
-print(numbers_odd)
+def check_temp(value):
+    if value >= 30:
+        return "Too hot"
+    elif value >= 20:
+        return "Good hot"
+    elif value >= 10:
+        return "Nice cold"
+    else:
+        return "Absolutely freezing"
 
-numbers_odd_x = [i if i % 2 != 0 else "X" for i in range(1, 11)]
-print(numbers_odd_x)
 
+cities_temp_desc_2 = {key: check_temp(value) for (key, value) in cities_temp.items()}
+print(cities_temp_desc_2)
