@@ -1,10 +1,12 @@
-usernames = ["billy", "johnson", "petodas"]
+import test
 
-passwords = ["billy_matato", "sonjohn", "potatoes"]
 
-users = dict(zip(usernames, passwords))
+def hello():
+    print("hello!")
 
-print(type(users))
 
-for (key, value) in users.items():
-    print(key + " : " + value)
+if __name__ == "__main__":
+    print("This is the main file!")
+else:
+    hello()
+    print(test.__name__)
