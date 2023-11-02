@@ -1,12 +1,15 @@
-import test
+import time
 
+epoch = time.ctime(0)
+print(epoch)
 
-def hello():
-    print("hello!")
+since_epoch = time.time()
+print(since_epoch)
 
+print(time.ctime(time.time()))
 
-if __name__ == "__main__":
-    print("This is the main file!")
-else:
-    hello()
-    print(test.__name__)
+time_object = time.localtime()
+print(time_object)
+
+local_time = time.strftime("%d %B %Y - %H:%M:%S", time_object)
+print(local_time)
