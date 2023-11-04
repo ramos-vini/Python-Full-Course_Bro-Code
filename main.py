@@ -1,15 +1,31 @@
 import time
+import threading
 
-epoch = time.ctime(0)
-print(epoch)
 
-since_epoch = time.time()
-print(since_epoch)
+def eat_breakfast():
+    time.sleep(3)
+    print("You ate breakfast")
 
-print(time.ctime(time.time()))
 
-time_object = time.localtime()
-print(time_object)
+def drink_coffee():
+    time.sleep(4)
+    print("You drank coffee")
 
-local_time = time.strftime("%d %B %Y - %H:%M:%S", time_object)
-print(local_time)
+
+def study():
+    time.sleep(5)
+    print("You finished studying")
+
+
+x = threading.Thread(target=eat_breakfast)
+x.start()
+
+y = threading.Thread(target=drink_coffee)
+y.start()
+
+z = threading.Thread(target=study)
+z.start()
+
+print(threading.active_count())
+print(threading.enumerate())
+print(time.perf_counter())
