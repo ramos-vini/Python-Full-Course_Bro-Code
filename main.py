@@ -1,31 +1,20 @@
-import time
 import threading
+import time
 
 
-def eat_breakfast():
-    time.sleep(3)
-    print("You ate breakfast")
+def time_counter():
+    print()
+    print()
+    counter = 0
+    while True:
+        time.sleep(1)
+        counter += 1
+        print(f"Your program has been running for {counter} seconds")
 
 
-def drink_coffee():
-    time.sleep(4)
-    print("You drank coffee")
-
-
-def study():
-    time.sleep(5)
-    print("You finished studying")
-
-
-x = threading.Thread(target=eat_breakfast)
+x = threading.Thread(target=time_counter, daemon=True)
 x.start()
 
-y = threading.Thread(target=drink_coffee)
-y.start()
+answer = input("Type in anything in order to exit the program: \n")
 
-z = threading.Thread(target=study)
-z.start()
 
-print(threading.active_count())
-print(threading.enumerate())
-print(time.perf_counter())
